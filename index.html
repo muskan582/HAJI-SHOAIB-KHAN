@@ -21,10 +21,17 @@
     }
     h1{color:#0077ff;font-size:22px;margin-top:35px;text-transform:uppercase;}
     p{font-size:15px;margin:8px 0;}
-    .timer{font-size:18px;margin-top:10px;font-weight:bold;color:#ff6600;}
+    .timer{
+      font-size:18px;
+      margin-top:10px;
+      font-weight:bold;
+      color:#ff6600;
+    }
     .profile{display:flex;justify-content:center;margin:18px 0;}
     .profile img{
-      width:160px;height:160px;border-radius:50%;
+      width:160px;
+      height:160px;
+      border-radius:50%;
       border:3px solid #0077ff;
       box-shadow:0 0 15px rgba(0,119,255,.3);
       object-fit:cover;
@@ -88,7 +95,10 @@ src="https://www.facebook.com/tr?id=2057878985044607&ev=PageView&noscript=1"/>
   <h1>HAJI SHOAIB KHAN</h1>
   <p>💰Dominate the Market. Learn the strategy 🎯</p>
 
-  <div class="timer">LIMITED ACCESS</div>
+  <!-- ⏳ COUNTDOWN -->
+  <div class="timer">
+    Offer ends in <span id="countdown">5</span> seconds
+  </div>
 
   <div class="profile">
     <img src="https://fantasticczone.site/image/kkkk.jpg" alt="Trading Logo">
@@ -108,9 +118,9 @@ src="https://www.facebook.com/tr?id=2057878985044607&ev=PageView&noscript=1"/>
 </main>
 
 <section class="disclaimer">
-<strong>Disclaimer:</strong>
-All trading activities involve risk.
-No guaranteed profits. Trade responsibly.
+  <strong>Disclaimer:</strong>
+  All trading activities involve risk.
+  No guaranteed profits. Trade responsibly.
 </section>
 
 <div class="footer-links">
@@ -118,6 +128,20 @@ No guaranteed profits. Trade responsibly.
   <span>|</span>
   <a href="#">Contact Us</a>
 </div>
+
+<!-- ⏳ COUNTDOWN SCRIPT (NO REDIRECT) -->
+<script>
+  let time = 5;
+  const countdownEl = document.getElementById("countdown");
+
+  setInterval(() => {
+    time--;
+    if (time === 0) {
+      time = 5; // 🔁 reset, no redirect
+    }
+    countdownEl.textContent = time;
+  }, 1000);
+</script>
 
 </body>
 </html>

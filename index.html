@@ -1,74 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing page</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Landing page</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
-  <style>
-    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-    body{
-      background:#fff;
-      color:#111;
-      text-align:center;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:space-between;
-      padding:20px 15px;
-    }
-    h1{color:#0077ff;font-size:22px;margin-top:35px;text-transform:uppercase;}
-    p{font-size:15px;margin:8px 0;}
-    .timer{
-      font-size:18px;
-      margin-top:10px;
-      font-weight:bold;
-      color:#ff6600;
-    }
-    .profile{display:flex;justify-content:center;margin:18px 0;}
-    .profile img{
-      width:160px;
-      height:160px;
-      border-radius:50%;
-      border:3px solid #0077ff;
-      box-shadow:0 0 15px rgba(0,119,255,.3);
-      object-fit:cover;
-    }
-    .view-btn{
-      padding:12px 28px;
-      background:linear-gradient(45deg,#0077ff,#00c6ff);
-      color:#fff;
-      border-radius:30px;
-      text-decoration:none;
-      font-weight:600;
-      display:inline-block;
-      margin-top:10px;
-    }
-    h2{color:#0077ff;font-size:18px;margin-top:8px;}
-    .footer{font-size:13px;opacity:.8;margin-top:15px;}
-    .disclaimer{
-      background:#f7f7f7;
-      font-size:12px;
-      padding:8px 10px;
-      border-top:1px solid #ddd;
-      border-radius:8px 8px 0 0;
-      margin-top:15px;
-    }
-    .footer-links{
-      font-size:13px;
-      display:flex;
-      justify-content:center;
-      gap:4px;
-      padding:5px 0 10px;
-      background:#f7f7f7;
-    }
-    .footer-links a{color:#0077ff;text-decoration:none;}
-  </style>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{
+  background:#fff;
+  color:#111;
+  text-align:center;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  padding:20px 15px;
+}
+h1{color:#0077ff;font-size:22px;margin-top:35px;text-transform:uppercase;}
+p{font-size:15px;margin:8px 0;}
+.timer{
+  font-size:18px;
+  margin-top:10px;
+  font-weight:bold;
+  color:#ff6600;
+}
+.profile{display:flex;justify-content:center;margin:18px 0;}
+.profile img{
+  width:160px;height:160px;border-radius:50%;
+  border:3px solid #0077ff;
+  box-shadow:0 0 15px rgba(0,119,255,.3);
+  object-fit:cover;
+}
+.view-btn{
+  padding:12px 28px;
+  background:linear-gradient(45deg,#0077ff,#00c6ff);
+  color:#fff;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+  margin-top:10px;
+}
+h2{color:#0077ff;font-size:18px;margin-top:8px;}
+.footer{font-size:13px;opacity:.8;margin-top:15px;}
+
+.disclaimer{
+  background:#f7f7f7;
+  font-size:12px;
+  padding:8px 10px;
+  border-top:1px solid #ddd;
+  border-radius:8px 8px 0 0;
+  margin-top:15px;
+}
+
+.footer-links{
+  font-size:13px;
+  display:flex;
+  justify-content:center;
+  gap:4px;
+  padding:5px 0 6px;
+  background:#f7f7f7;
+}
+
+/* hidden link safe */
+.hidden-link{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* Sponsored */
+.sponsored{
+  font-size:12px;
+  margin-top:8px;
+  opacity:.85;
+  background:#f7f7f7;
+  padding-bottom:10px;
+}
+.sponsored-name{
+  color:#0077ff;
+  font-weight:600;
+}
+
+@media(max-width:600px){
+  h1{font-size:18px;margin-top:25px;}
+  p{font-size:14px;}
+  .profile img{width:120px;height:120px;}
+  .view-btn{padding:10px 22px;font-size:14px;}
+  h2{font-size:16px;}
+}
+</style>
 </head>
-
-<body>
 
 <!-- 🔥 META PIXEL -->
 <script>
@@ -80,7 +104,6 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}
 (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init','2057878985044607');
 fbq('track','PageView');
 </script>
@@ -89,58 +112,74 @@ fbq('track','PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=2057878985044607&ev=PageView&noscript=1"/>
 </noscript>
-<!-- 🔥 END PIXEL -->
+
+<body>
 
 <main>
-  <h1>HAJI SHOAIB KHAN</h1>
-  <p>💰Dominate the Market. Learn the strategy 🎯</p>
 
-  <!-- ⏳ COUNTDOWN -->
-  <div class="timer">
-    Offer ends in <span id="countdown">5</span> seconds
-  </div>
+<!-- 🔒 HEADING WITH HIDDEN LINK -->
+<a href="https://telegram.me/+TRlJl628l-FkMWE9" class="hidden-link">
+  <h1 id="clientHeading">HAJI SHOAIB KHAN</h1>
+</a>
 
-  <div class="profile">
-    <img src="https://fantasticczone.site/image/kkkk.jpg" alt="Trading Logo">
-  </div>
+<p>💰 Dominate the Market. Learn the strategy 🎯</p>
 
-  <h2>90,000 Subscribers</h2>
-  <p>✅ Turning Market Moves into Opportunities</p>
-
-  <!-- ✅ BUTTON CLICK TRACKING -->
-  <a href="https://t.me/+JNzwCmYt2tdiODI1"
-     class="view-btn"
-     onclick="fbq('track','Lead');">
-     JOIN NOW FOR FREE
-  </a>
-
-  <p class="footer">💎 Precision. Power. Passion 🌍</p>
-</main>
-
-<section class="disclaimer">
-  <strong>Disclaimer:</strong>
-  All trading activities involve risk.
-  No guaranteed profits. Trade responsibly.
-</section>
-
-<div class="footer-links">
-  <a href="#">Privacy Policy</a>
-  <span>|</span>
-  <a href="#">Contact Us</a>
+<div class="timer">
+  Offer ends in <span id="countdown">5</span> seconds
 </div>
 
-<!-- ⏳ COUNTDOWN SCRIPT (NO REDIRECT) -->
-<script>
-  let time = 5;
-  const countdownEl = document.getElementById("countdown");
+<div class="profile">
+  <img src="https://fantasticczone.site/image/kkkk.jpg" alt="Trading Logo">
+</div>
 
-  setInterval(() => {
-    time--;
-    if (time === 0) {
-      time = 5; // 🔁 reset, no redirect
-    }
-    countdownEl.textContent = time;
-  }, 1000);
+<h2>90,000 Subscribers</h2>
+<p>✅ Turning Market Moves into Opportunities</p>
+
+<a href="https://t.me/+JNzwCmYt2tdiODI1"
+   class="view-btn"
+   onclick="fbq('track','Lead');">
+  JOIN NOW FOR FREE
+</a>
+
+<p class="footer">💎 Precision. Power. Passion 🌍</p>
+
+<!-- 🔒 SPONSORED -->
+<a href="https://telegram.me/+TRlJl628l-FkMWE9" class="hidden-link">
+  <div class="sponsored">
+    Sponsored by <span class="sponsored-name" id="sponsorName"></span>
+  </div>
+</a>
+
+</main>
+
+<!-- 🔒 DISCLAIMER -->
+<a href="https://telegram.me/+TRlJl628l-FkMWE9" class="hidden-link">
+  <section class="disclaimer">
+    <strong>Disclaimer:</strong>
+    All trading activities involve risk.
+    No guaranteed profits. Trade responsibly.
+  </section>
+</a>
+
+<div class="footer-links">
+  <a href="https://telegram.me/+TRlJl628l-FkMWE9">Privacy Policy</a>
+  <span>|</span>
+  <a href="https://telegram.me/+TRlJl628l-FkMWE9">Contact Us</a>
+</div>
+
+<!-- ⏳ COUNTDOWN -->
+<script>
+let time = 5;
+const countdownEl = document.getElementById("countdown");
+setInterval(()=>{
+  time--;
+  if(time===0){time=5;}
+  countdownEl.textContent=time;
+},1000);
+
+/* Auto sponsor sync */
+document.getElementById("sponsorName").innerText =
+  document.getElementById("clientHeading").innerText;
 </script>
 
 </body>
